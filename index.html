@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
@@ -11,13 +10,29 @@
 
 	<style>
 		body {
-		  font-size: calc(0.75em + 1vmin);
+			font-size: calc(0.75em + 1vmin);
+			background-image: url("https://images.antiquemapsandprints.com/scansr1/P-6-015296a.jpg");
+			background-position: center; 
+			background-repeat: no-repeat; 
+			background-size: cover;
+		}
+
+		.column {background: #FFFFFF;}
+
+		summary {
+		    margin: 0 0 25px 0;
 		}
 		
+		.sum-title {
+		    margin: 0 30px 0 15px;
+    		text-decoration: underline;
+    		font-weight: bold;
+		}
+
 		.tags {
-			padding: 5px 25px;
-		    border-radius: 30px;
-		    border: .5px solid black;
+			padding: 2px 25px;
+			border-radius: 30px;
+			border: .5px solid black;
 		}
 
 		.tags-lore {background: #58C8F2;}
@@ -25,89 +40,86 @@
 		.tags-generateur {background: #FFFFFF;}
 	</style>
 </head>
-
 	
 <body>
 	
 	<div class="container"> <!-- debut container -->
-	  <div class="columns">
-		  <div class="column col-12">
-			<h1>Alter/Mundi</h1>
-		  </div>
+		<div class="columns">
+			<div class="column col-10 col-mx-auto">
+				<h1>Alter/Mundi</h1>
+			</div>
 	
-		<div class="column col-12">
-			<ol>
-		        <li><a href="">titre</a></li>
-		    </ol>
-		</div>
+			<div class="column col-10 col-mx-auto">
+				<ol>
+					<li><a href="">titre</a></li>
+				</ol>
+			</div>
 	
-		  <div class="column col-12">
-			<details id="" open>
-		        <summary>
-		            Summary
-					</br>
-					<span class="tags tags-lore">lore</span>
-		            <span class="tags tags-regles">regles</span>
-		            <span class="tags tags-generateur">generateur</span>
-		        </summary>
-		
-		        <p>Detailed content goes here …</p>
+			<div class="column col-10 col-mx-auto">
+				<details id="" open>
+					<summary>
+						<span class="sum-title">Summary</span>
+						<span class="tags tags-lore">lore</span>
+						<span class="tags tags-regles">regles</span>
+						<span class="tags tags-generateur">generateur</span>
+					</summary>
+			
+					<p>Detailed content goes here …</p>
 
-				<table class="table table-striped table-hover">
-				  <thead>
-				    <tr>
-				      <th></th>
-				      <th>partie du corps</th>
-				      <th>malus</th>
-				    </tr>
-				  </thead>
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th></th>
+								<th>partie du corps</th>
+								<th>malus</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr class="active">
+								<td>1</td>
+								<td>tete</td>
+								<td>int -10</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>torse</td>
+								<td>sag -10</td>
+							</tr>
+
+							<tr class="active">
+								<td>3</td>
+								<td>bras gauche</td>
+								<td>for -10</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td>bras droit</td>
+								<td>for -10</td>
+							</tr>
+
+							<tr class="active">
+								<td>5</td>
+								<td>jambe gauche</td>
+								<td>agi -10</td>
+							</tr>
+
+							<tr>
+								<td>6</td>
+								<td>jambe droite</td>
+								<td>agi -10</td>
+							</tr>
+						</tbody>
+					</table>
 					
-				  <tbody>
-				    <tr class="active">
-				      <td>1</td>
-				      <td>tete</td>
-				      <td>int -10</td>
-				    </tr>
-
-					<tr>
-				      <td>2</td>
-				      <td>torse</td>
-				      <td>sag -10</td>
-				    </tr>
-
-					<tr class="active">
-				      <td>3</td>
-				      <td>bras gauche</td>
-				      <td>for -10</td>
-				    </tr>
-
-					<tr>
-				      <td>4</td>
-				      <td>bras droit</td>
-				      <td>for -10</td>
-				    </tr>
-
-					<tr class="active">
-				      <td>5</td>
-				      <td>jambe gauche</td>
-				      <td>agi -10</td>
-				    </tr>
-
-					<tr>
-				      <td>6</td>
-				      <td>jambe droite</td>
-				      <td>agi -10</td>
-				    </tr>
-				  </tbody>
-				</table>
-				
-		    </details>
-		  </div>
+				</details>
+			</div>
 	
 		  
-	  </div>
+		</div>
 	</div> <!-- fin container -->
 
 </body>
 </html>
-</body>
