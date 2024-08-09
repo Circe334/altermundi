@@ -15,7 +15,7 @@
 		}
 
 
-
+		/* CSS */
 		body {
 			padding-bottom: 50px;
 			font-size: calc(1em + 1vmin);
@@ -28,25 +28,11 @@
 
 		.column {background: #FFFFFF;}
 
-		summary {
-		    margin: 0 0 25px 0;
-		}
 		
 		.sum-title {
-		    margin: 0 30px 0 15px;
     		text-decoration: underline;
     		font-weight: bold;
-		}
-
-		.tags {
-			padding: 2px 25px;
-			border-radius: 30px;
-			border: .5px solid black;
-		}
-
-		.tags-lore {background: #58C8F2;}
-		.tags-regles {background: #F5A9B8;}
-		.tags-generateur {background: #FFFFFF;}
+		} 	
 	</style>
 </head>
 	
@@ -75,18 +61,12 @@
 
 			
 			<div class="column col-10 col-mx-auto"> <!-- debut LORE -->
-				<details id="lore" open>
-					<summary>
-						<span class="sum-title">Le Lore</span>
-						<span class="tags tags-lore">lore</span>
-					</summary>
-			
-					<p>
-						un monde victorien, l'empire britannique, les années 1800.
-						Une alter humanité, peupler de vampire, loup-garou et autre demon.
-					</p>
+				<h2 id="lore" class="sum-title">Le Lore</h2>
 					
-				</details>
+				<p>
+					un monde victorien, l'empire britannique, les années 1800.
+					Une alter humanité, peupler de vampire, loup-garou et autre demon.
+				</p>
 			</div> <!-- fin LORE -->
 
 
@@ -95,114 +75,148 @@
 
 			
 			<div class="column col-10 col-mx-auto"> <!-- debut REGLES & LORE -->
-				<details id="regles" open>
-					<summary>
-						<span class="sum-title">Les regles & le lore</span>
-						<span class="tags tags-regles">regles</span>
-						<span class="tags tags-lore">lore</span>
-					</summary>
+				<h2 id="regles" class="sum-title">Les regles & le lore</h2>
 
-					<h2 id="regles-fichepersonnage">fiche personnage</h2>
-			
-					<p>
-						contient les informations suivante : nom, background, apparence, alter-espece, transformation, archetype, element, stats, capacités, principes 
-					</p>
+				<h3 id="regles-fichepersonnage">fiche personnage</h3>
+		
+				<p>
+					contient les informations suivante : nom, background, apparence, alter-espece, transformation, archetype, element, stats, capacités, principes 
+				</p>
 
-					<h2 id="regles-stats">les stats</h2>
+				<h3 id="regles-stats">les stats</h3>
 
-					<p>
-						au nombre de 6, les statistiques servent a representer les personnages
-						force (for), agilité (agi), mental (men) et sagesse (sag)
-						completer par 2 stats : l'endurance (end) et le secret (sec)
-						<br>
-						a la creation du personnage on repartie 100 points entre les 4 premieres stats
-						puis les calculent suivant complete les deux stats suivante
-						<br>
-						endurance = (for + men) / 2
-						secret = (agi + sag) / 2
-						<br>
-						les statistiques sont inscrite sur une fiche personnage de la maniere suivante
-						stat de base, stat en cours, stat max
-					</p>
+				<p>
+					au nombre de 6, les statistiques servent a representer les personnages
+					force (for), agilité (agi), mental (men) et sagesse (sag)
+					completer par 2 stats : l'endurance (end) et le secret (sec)
+					<br>
+					a la creation du personnage on repartie 100 points entre les 4 premieres stats
+					puis les calculent suivant complete les deux stats suivante
+					<br>
+					endurance = (for + men) / 2
+					secret = (agi + sag) / 2
+					<br>
+					les statistiques sont inscrite sur une fiche personnage de la maniere suivante
+					stat de base, stat en cours, stat max
+				</p>
 
-					<h2 id="regles-alterespece">Alter espece</h2>
+				<h3 id="regles-alterespece">Alter espece</h3>
 
-					<p>
-						les Alter-especes sont...
-					</p>
+				<p>
+					les Alter-especes sont...
+				</p>
 					
-				</details>
+				
 			</div> <!-- fin REGLES & LORE -->
 
 
 
 
 			<div class="column col-10 col-mx-auto"> <!-- Debut GENERATEUR -->
-				<details id="generateurs" open>
-					<summary>
-						<span class="sum-title">Les generateurs</span>
-						<span class="tags tags-generateur">generateurs</span>
-					</summary>
+				
+				<h2 id="generateurs" class="sum-title">Les generateurs</h2>
 
-					<p>
-						les generateurs sont des tableaux qui permettent d'aider voir de se passer d'un mj (et ainsi avoir un joueur de plus autour de la table)
-					</p>
+				<p>
+					les generateurs sont des tableaux qui permettent d'aider voir de se passer d'un mj (et ainsi avoir un joueur de plus autour de la table)
+				</p>
 
-					<table class="table table-striped table-hover">
-						<thead>
-							<tr>
-								<th></th>
-								<th>partie du corps</th>
-								<th>malus</th>
-							</tr>
-						</thead>
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th></th>
+							<th>partie du corps</th>
+							<th>malus</th>
+						</tr>
+					</thead>
 						
-						<tbody>
-							<tr class="active">
-								<td>1</td>
-								<td>tete</td>
-								<td>int -10</td>
-							</tr>
+					<tbody>
+						<tr class="active">
+							<td>1</td>
+							<td>tete</td>
+							<td>int -10</td>
+						</tr>
 
-							<tr>
-								<td>2</td>
-								<td>torse</td>
-								<td>sag -10</td>
-							</tr>
+						<tr>
+							<td>2</td>
+							<td>torse</td>
+							<td>sag -10</td>
+						</tr>
 
-							<tr class="active">
-								<td>3</td>
-								<td>bras gauche</td>
-								<td>for -10</td>
-							</tr>
+						<tr class="active">
+							<td>3</td>
+							<td>bras gauche</td>
+							<td>for -10</td>
+						</tr>
 
-							<tr>
-								<td>4</td>
-								<td>bras droit</td>
-								<td>for -10</td>
-							</tr>
+						<tr>
+							<td>4</td>
+							<td>bras droit</td>
+							<td>for -10</td>
+						</tr>
 
-							<tr class="active">
-								<td>5</td>
-								<td>jambe gauche</td>
-								<td>agi -10</td>
-							</tr>
+						<tr class="active">
+							<td>5</td>
+							<td>jambe gauche</td>
+							<td>agi -10</td>
+						</tr>
 
-							<tr>
-								<td>6</td>
-								<td>jambe droite</td>
-								<td>agi -10</td>
-							</tr>
-						</tbody>
-					</table>
+						<tr>
+							<td>6</td>
+							<td>jambe droite</td>
+							<td>agi -10</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				<table id="dataTable"></table>
 					
 					
-				</details>
 			</div> <!-- fin GENERATEUR -->
 	
 		  
 		</div>
 	</div> <!-- fin container -->
+
+
+
+
+
+	<script>
+        // Fetch data from JSON file
+        fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Create table headers
+            const table = document.getElementById('dataTable');
+            const headers = Object.keys(data[0]);
+            const headerRow = document.createElement('tr');
+            headers.forEach((header, index) => {
+                const th = document.createElement('th');
+                if (index === 0) {
+                    th.textContent = '#';
+                } else {
+                    th.textContent = header;
+                }
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
+
+            // Create table rows with random data
+            data.forEach((row, rowIndex) => {
+                const rowElement = document.createElement('tr');
+                const rowValues = Object.values(row);
+                rowValues.unshift(rowIndex + 1); // Add row number as first column
+                rowValues.forEach((value) => {
+                    const td = document.createElement('td');
+                    td.textContent = value;
+                    rowElement.appendChild(td);
+                });
+                table.appendChild(rowElement);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    </script>
 
 </body>
 </html>
