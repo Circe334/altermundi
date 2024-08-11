@@ -2,3 +2,5 @@ index.html > manifeste + lien
 lore.html > lien + lore
 regles.html > lien + regles
 generateur.html > lien + table + generateur aleatoire
+
+Fait a la main avec amour et spectre.css
