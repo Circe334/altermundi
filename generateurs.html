@@ -1,1 +1,205 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Alter/Mundi</title>
 
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+	<style>
+		/*CUSTOM SPECTRE*/
+		.table {
+			margin: 0 0 3rem;
+		}
+
+		.table.table-hover tbody tr:hover {
+		    background: #8eb0e4;
+		}
+
+		#dataTable tr:nth-child(odd) {
+			background: #eef0f3;
+		}
+
+		p {
+		    margin: 0 0 3rem;
+		}
+
+
+		/* CSS */
+		body {
+			padding-bottom: 50px;
+			font-size: calc(1em + 1vmin);
+			/*background-image: url("https://images.antiquemapsandprints.com/scansr1/P-6-015296a.jpg");
+			background-position: center; 
+			background-repeat: no-repeat; 
+			background-size: cover;*/
+			/*background: linear-gradient(to right, rgb(213, 44, 0), rgb(226, 150, 136), rgb(255, 255, 255) 45%, rgb(255, 255, 255), rgb(255, 255, 255) 55%, rgb(210, 127, 164), rgb(162, 2, 98));*/
+		}
+
+		.column {background: #FFFFFF;}
+		
+		.sum-title {
+    		text-decoration: underline;
+    		font-weight: bold;
+		} 	
+	</style>
+</head>
+	
+<body>
+	
+	<div class="container"> <!-- debut container -->
+		<div class="columns">
+			<div class="column col-10 col-mx-auto">
+				<h1>Alter/Mundi - Generateurs</h1>
+			</div>
+	
+			<div class="column col-10 col-mx-auto">
+				<ol>
+					<li><a href="#lore">Le lore</a></li>
+					<li><a href="#regles">Les regles</a></li>
+
+					<li><a href="#generateurs">Les generateurs</a></li>
+					<ol>
+						<li><a href="#generateurs-corps">Parties du corps</a></li>
+						<li><a href="#generateurs-event">Evenements</a></li>
+					</ol>
+				</ol>
+			</div>
+	
+
+			<div class="column col-10 col-mx-auto"> <!-- Debut GENERATEUR -->
+				
+				<h2 id="generateurs" class="sum-title">Les generateurs</h2>
+
+				<p>
+					les generateurs sont des tableaux qui permettent d'aider voir de se passer d'un mj (et ainsi avoir un joueur de plus autour de la table)
+				</p>
+
+				<table id="generateurs-corps" class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th></th>
+							<th>partie du corps</th>
+							<th>malus</th>
+						</tr>
+					</thead>
+						
+					<tbody>
+						<tr class="active">
+							<td>1</td>
+							<td>tete</td>
+							<td>int -10</td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>torse</td>
+							<td>sag -10</td>
+						</tr>
+
+						<tr class="active">
+							<td>3</td>
+							<td>bras gauche</td>
+							<td>for -10</td>
+						</tr>
+
+						<tr>
+							<td>4</td>
+							<td>bras droit</td>
+							<td>for -10</td>
+						</tr>
+
+						<tr class="active">
+							<td>5</td>
+							<td>jambe gauche</td>
+							<td>agi -10</td>
+						</tr>
+
+						<tr>
+							<td>6</td>
+							<td>jambe droite</td>
+							<td>agi -10</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+
+				<h3>table d'evenement (aleatoire)</h3>
+
+				<table id="generateurs-event" class="table table-striped table-hover">
+					<tbody id="dataTable__event"></tbody>
+				</table>
+					
+					
+			</div> <!-- fin GENERATEUR -->
+	
+		  
+		</div>
+	</div> <!-- fin container -->
+
+
+
+
+
+	    <script>
+        // Load JSON data
+        const jsonData = [
+            { "categorie": "John", "contenu": 25},
+            { "categorie": "Alice", "contenu": 30},
+            { "categorie": "trouduc", "contenu": 12},
+            { "categorie": "Bob", "contenu": 28}
+        ];
+
+        // Function to generate random data from JSON
+        function generateRandomData(rows, jsonData) {
+            const data = [];
+            for (let i = 0; i < rows; i++) {
+                const randomIndex = Math.floor(Math.random() * jsonData.length);
+                data.push(jsonData[randomIndex]);
+            }
+            return data;
+        }
+
+        // Function to shuffle array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Shuffle JSON data
+        const shuffledData = shuffleArray(jsonData);
+
+        // Create table headers
+        const table = document.getElementById('dataTable__event');
+        const headers = Object.keys(shuffledData[0]);
+        const headerRow = document.createElement('tr');
+        headers.unshift('#'); // Add row number as first column
+        headers.forEach((header) => {
+            const th = document.createElement('th');
+            th.textContent = header;
+            headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
+
+        // Create table rows with shuffled data
+        shuffledData.forEach((row, rowIndex) => {
+            const rowElement = document.createElement('tr');
+            const rowValues = Object.values(row);
+            rowValues.unshift(rowIndex + 1); // Add row number as first column
+            rowValues.forEach((value) => {
+                const td = document.createElement('td');
+                td.textContent = value;
+                rowElement.appendChild(td);
+            });
+            table.appendChild(rowElement);
+        });
+    </script>
+
+</body>
+</html>
