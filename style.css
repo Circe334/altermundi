@@ -1,0 +1,42 @@
+/*CUSTOM SPECTRE*/
+.table {
+    margin: 0 0 3rem;
+}
+
+.table.table-hover tbody tr:hover {
+    background: #8eb0e4;
+}
+
+#dataTable tr:nth-child(odd) {
+    background: #eef0f3;
+}
+
+p {
+    margin: 0 0 3rem;
+}
+
+
+/* CSS */
+body {
+    background: #191919;
+    color: #FFFFFF;
+
+    padding-bottom: 50px;
+    font-size: calc(1em + 1vmin);
+    /*background-image: url("https://images.antiquemapsandprints.com/scansr1/P-6-015296a.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;*/
+    /*background: linear-gradient(to right, rgb(213, 44, 0), rgb(226, 150, 136), rgb(255, 255, 255) 45%, rgb(255, 255, 255), rgb(255, 255, 255) 55%, rgb(210, 127, 164), rgb(162, 2, 98));*/
+}
+
+.column {
+    /* background: #FFFFFF; */
+    margin-bottom: 25px;
+}
+
+
+.sum-title {
+    text-decoration: underline;
+    font-weight: bold;
+}
