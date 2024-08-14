@@ -90,3 +90,9 @@ h3::after {content: " ~";}
       margin-left: 4vh;
     } 
   }
+
+  .btt {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+  }
