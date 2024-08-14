@@ -3,4 +3,11 @@ lore.html > lien + lore
 regles.html > lien + regles
 generateur.html > lien + table + generateur aleatoire
 
+
+code couleurs 
+loulouve : violet
+patate : vert
+tataelle : rouge
+moi : rose COCHONG
+
 Fait a la main avec amour et spectre.css
