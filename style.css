@@ -7,12 +7,20 @@
     background: #8eb0e4;
 }
 
-#dataTable tr:nth-child(odd) {
+/* #dataTable tr:nth-child(odd) {
     background: #eef0f3;
 }
 
+#dataTable tr:nth-child(even) {
+    background: #eef0f3;
+} */
+
 p {
     margin: 0 0 3rem;
+}
+
+.timeline-content p {
+    margin: auto;
 }
 
 
@@ -30,6 +38,14 @@ body {
     /*background: linear-gradient(to right, rgb(213, 44, 0), rgb(226, 150, 136), rgb(255, 255, 255) 45%, rgb(255, 255, 255), rgb(255, 255, 255) 55%, rgb(210, 127, 164), rgb(162, 2, 98));*/
 }
 
+ol ol li {
+    /* border-bottom: 1px solid pink; */
+}
+
+ol ol li a {
+    /* color: pink; */
+}
+
 .column {
     /* background: #FFFFFF; */
     margin-bottom: 25px;
@@ -39,4 +55,38 @@ body {
 .sum-title {
     text-decoration: underline;
     font-weight: bold;
+    text-align: center;
 }
+
+h3::before {content: "~ ";}
+h3::after {content: " ~";}
+
+/* https://codepen.io/airen/details/MWWOmEM */
+.custom-divider {
+    font-family: "Share Tech Mono", monospace;
+    color: #fff;
+    /* font-size: 6vh; */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      height: 0.09em;
+      min-width: 30vw;
+    }
+    
+    &::before {
+      background: linear-gradient(to right, rgba(240,240,240,0), #fff);
+      margin-right: 4vh;
+    }
+    
+    &::after {
+      background: linear-gradient(to left, rgba(240,240,240,0), #fff);
+      margin-left: 4vh;
+    } 
+  }
