@@ -58,8 +58,9 @@ ol ol li a {
     text-align: center;
 }
 
-h3::before {content: "~ ";}
-h3::after {content: " ~";}
+/* http://xahlee.info/comp/unicode_typography_ornaments.html  🙟 🙝 */
+h3::before {content: "🙟 ";}
+h3::after {content: " 🙝";}
 
 /* https://codepen.io/airen/details/MWWOmEM */
 .custom-divider {
